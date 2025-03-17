@@ -1,0 +1,57 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #5c2d2d;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e8d2c3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5c2d2d;
+    font-weight: bold;
+}
+
+.menu a.active {
+    text-decoration: underline;
+}
+
+.header-right button {
+    background-color: #d89a94;
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    margin-right: 800px;
+}
