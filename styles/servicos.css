@@ -1,0 +1,91 @@
+body {
+    background-color: #752a49;
+}
+
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: 87vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: calc(100% - 40px); /* Adjust for padding */
+}
+
+.carousel-item {
+    min-width: calc(100% - 40px); /* Adjust for margin */
+    margin: 0 20px; /* Add spacing between items */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.text-content {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0; /* Align text-content to the left */
+    transform: translateY(-50%); /* Center vertically */
+    width: 30%; /* Adjust width to fit text on the left */
+    height: 60%; /* Increase height */
+    color: white;
+    padding: 20px; /* Increase padding for better spacing */
+    border-radius: 8px;
+    text-align: left; /* Ensure text is aligned to the left */
+    opacity: 0;
+    animation: slideUp 1s ease-out 0.5s forwards; /* Animation to slide up */
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0); /* Move to original position */
+        opacity: 1; /* Fade in */
+    }
+}
+
+.text-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.text-content p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+
+#item1, #img1 {
+    width: 95%;
+    padding-left: 7px;
+}
+
+#item2, #img2 {
+    width: 90%;
+}
+
+#item3, #img3 {
+    width: 90%;
+    
+}
+#item4, #img4 {
+    width: 90%;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    background-color: #e8d2c3;
+}
