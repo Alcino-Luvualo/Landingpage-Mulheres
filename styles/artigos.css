@@ -1,84 +1,35 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-    color: #5c2d2d;
-    overflow: hidden;
-    background-color: #e8d2c3;
-    
-}
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #e8d2c3;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.menu li {
-    display: inline;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #5c2d2d;
-    font-weight: bold;
-}
-
-.menu a.active {
-    text-decoration: underline;
-}
-
-.header-right button {
-    background-color: #d89a94;
-    border: none;
-    color: white;
-    font-size: 14px;
-    padding: 5px 10px;
-    margin-left: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-h1 {
-    font-size: 2.5rem;
-    margin: 20px 0;
-    margin-right: 800px;
-}
-
-
-
-
-
-
-/*Estilo Global------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #752a49;
+}
 
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #e8d2c3;
+        position: fixed;
+        z-index: 1000;
+        margin-top: -460px;
+        width: 100%;
+        
+    
+    }
 .container {
-    position: absolute;
+    margin-top: 460px;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 99%;
     height: 680px;
-    background: #f5f5f5;
-    box-shadow: 0 30px 50px #dbdbdb;
-
 
 }
 
@@ -89,7 +40,6 @@ h1 {
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;

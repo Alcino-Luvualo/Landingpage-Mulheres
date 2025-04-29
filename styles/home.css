@@ -5,9 +5,28 @@ body, html {
     height: 100%;
     background-color: #752a49;
 }
+h1 {
+    color: #5c2d2d;
+
+}
 
 header {
     height: 10vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e8d2c3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1000;
+    margin-top: -35px;
+    width: 100%;
+    
+
 }
 
 .gallery-container {
@@ -25,7 +44,7 @@ header {
     background-position: center;
     position: relative;
     transition: transform 0.3s ease, filter 0.3s ease;
-    border-radius: 5px;
+    border-radius: 20px;
     height: 100%;
 }
 

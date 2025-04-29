@@ -1,20 +1,19 @@
 /* Estilos globais */
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     margin: 0;
     font-family: sans-serif;
-    color: #5c2d2d;
+    overflow-x:hidden ;
+    background-image: url(/assets/fundorosa.jpg);
     
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #e8d2c3;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-}
 
 .menu {
     list-style: none;
@@ -28,14 +27,14 @@ header {
     display: inline;
 }
 
+.pass-hoove:hover {
+    text-decoration: underline;
+}
+
 .menu a {
     text-decoration: none;
     color: #5c2d2d;
     font-weight: bold;
-}
-
-.menu a.active {
-    text-decoration: underline;
 }
 
 .header-right button {
@@ -54,4 +53,93 @@ h1 {
     font-size: 2.5rem;
     margin: 20px 0;
     margin-right: 800px;
+}
+
+
+#inscreve {
+    margin-left: 20px;
+}
+ 
+.input {
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+
+}
+fieldset {
+    border: none;
+}
+
+.button-in {
+    width: 18%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(141, 206, 43);
+    border: none;
+
+}
+
+.button-in:hover {
+    background-color:  rgb(101, 148, 30);
+}
+
+footer {
+    background-color: #752a49;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section input {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section button {
+    padding: 5px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-section button:hover {
+    background-color: #777;
 }
