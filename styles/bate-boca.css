@@ -1,0 +1,173 @@
+/* Estilos para o container principal do chat */
+.chat-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a área de mensagens */
+.chat-messages {
+    height: 500px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para cada mensagem */
+.message {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message.sent {
+    margin-left: auto;
+    background-color: #e3f2fd;
+    border-bottom-right-radius: 5px;
+}
+
+.message.received {
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+/* Cores femininas para as mensagens */
+.message[data-color="1"] { background-color: #ffd1dc; } /* Rosa claro */
+.message[data-color="2"] { background-color: #e6e6fa; } /* Lavanda */
+.message[data-color="3"] { background-color: #b5d8eb; } /* Azul claro */
+.message[data-color="4"] { background-color: #d8bfd8; } /* Lilás */
+.message[data-color="5"] { background-color: #f0e6ef; } /* Rosa pálido */
+.message[data-color="6"] { background-color: #e0f7fa; } /* Azul água */
+.message[data-color="7"] { background-color: #f3e5f5; } /* Roxo claro */
+.message[data-color="8"] { background-color: #e8f5e9; } /* Verde menta */
+
+/* Estilos para o nome do usuário na mensagem */
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.message-user {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.message-content {
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Estilos para o container de input */
+.chat-input-container {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-name-input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.message-input-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.message-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.message-input:focus {
+    outline: none;
+    border-color: #ff69b4;
+}
+
+.send-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #ff1493;
+}
+
+/* Estilização da barra de rolagem */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #ff69b4;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #ff1493;
+}
+
+/* Estilos para a mensagem de login necessário */
+.login-required {
+    text-align: center;
+    padding: 2rem;
+}
+
+.login-required h2 {
+    color: #ff69b4;
+    margin-bottom: 1rem;
+}
+
+.login-required p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #ff1493;
+} 
+

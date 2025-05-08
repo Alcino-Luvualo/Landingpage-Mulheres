@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +15,7 @@ header {
         background-color: #e8d2c3;
         position: fixed;
         z-index: 1000;
-        margin-top: -460px;
+        margin-top: -490px;
         width: 100%;
         
     
@@ -30,6 +28,7 @@ header {
     transform: translate(-50%, -50%);
     width: 99%;
     height: 680px;
+    
 
 }
 
@@ -152,3 +151,283 @@ button {
     background: #ababab;
     color: #fff;
 }
+
+/* Estilos para as publicações */
+.publicacoes {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: -280px;
+}
+
+.publicacao {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
+    width: 100%;
+}
+
+.publicacao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.publicacao-imagem {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.publicacao-conteudo {
+    padding: 1.5rem;
+}
+
+.publicacao-titulo {
+    color: #5c2d2d;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.publicacao-texto {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.publicacao-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.publicacao-autor {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.autor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.autor-nome {
+    color: #ff69b4;
+    font-weight: 500;
+}
+
+.publicacao-data {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.publicacao-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: #f0e6ef;
+    color: #ff69b4;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+/* Animações */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilização da barra de rolagem */
+.publicacoes::-webkit-scrollbar {
+    width: 8px;
+}
+
+.publicacoes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.publicacoes::-webkit-scrollbar-thumb {
+    background: #ff69b4;
+    border-radius: 4px;
+}
+
+.publicacoes::-webkit-scrollbar-thumb:hover {
+    background: #ff1493;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .publicacoes {
+        padding: 1rem;
+    }
+
+    .publicacao-imagem {
+        height: 200px;
+    }
+
+    .publicacao-titulo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Menu mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5c2d2d;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle.active {
+    color: #ff69b4;
+    transform: rotate(90deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5c2d2d;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff69b4;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff69b4;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a.active {
+    color: #ff69b4;
+}
+
+.menu a.active::after {
+    width: 100%;
+}
+
+/* Media Queries para o menu */
+@media (max-width: 1187px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #e8d2c3;
+        padding: 5rem 1rem 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .menu.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.3s ease;
+    }
+
+    .menu.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu li:nth-child(1) { transition-delay: 0.1s; }
+    .menu li:nth-child(2) { transition-delay: 0.2s; }
+    .menu li:nth-child(3) { transition-delay: 0.3s; }
+    .menu li:nth-child(4) { transition-delay: 0.4s; }
+    .menu li:nth-child(5) { transition-delay: 0.5s; }
+
+    .menu a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .menu a::after {
+        display: none;
+    }
+
+    .menu a:hover {
+        color: #ff69b4;
+        transform: translateX(10px);
+    }
+}
+
+@media (min-width: 1188px) and (max-width: 1620px) {
+    .menu {
+        gap: 15px;
+    }
+} 

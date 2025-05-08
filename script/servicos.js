@@ -17,3 +17,4 @@ function startCarousel() {
 window.addEventListener('resize', updateCarousel);
 startCarousel();
 
+
