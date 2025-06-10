@@ -28,8 +28,7 @@ header {
     transform: translate(-50%, -50%);
     width: 99%;
     height: 680px;
-    
-
+    padding-top: 730px;
 }
 
  .slide .item {
@@ -158,6 +157,7 @@ button {
     max-width: 100%;
     margin: 0 auto;
     margin-top: -280px;
+ 
 }
 
 .publicacao {
@@ -170,6 +170,12 @@ button {
     opacity: 0;
     animation: slideUp 0.5s ease forwards;
     width: 100%;
+    margin: 20px 10px 0 10px;
+    
+}
+
+.row {
+    display: flex;
 }
 
 .publicacao:hover {
@@ -296,6 +302,8 @@ button {
     .publicacao-titulo {
         font-size: 1.2rem;
     }
+
+    
 }
 
 /* Menu mobile */
@@ -430,4 +438,4 @@ button {
     .menu {
         gap: 15px;
     }
-} 
+}

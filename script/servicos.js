@@ -1,20 +1,8 @@
-const carouselContainer = document.querySelector('.carousel-container');
-const carouselItems = document.querySelectorAll('.carousel-item');
-let currentIndex = 0;
-
-function updateCarousel() {
-    const width = carouselItems[0].clientWidth;
-    carouselContainer.style.transform = `translateX(-${currentIndex * width}px)`;
+// Função para avançar o carrossel
+function advanceCarousel() {
+    let items = document.querySelectorAll('.item');
+    document.querySelector('.slide').appendChild(items[0]);
 }
 
-function startCarousel() {
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel();
-    }, 3000); // Troca a cada 3 segundos
-}
-
-window.addEventListener('resize', updateCarousel);
-startCarousel();
-
-
+// Faz o carrossel avançar automaticamente a cada 3 segundos
+setInterval(advanceCarousel, 4000);

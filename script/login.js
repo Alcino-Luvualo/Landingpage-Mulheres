@@ -91,7 +91,7 @@ document.getElementById('password').addEventListener('input', function(e) {
     const senha = e.target.value.trim();
     if (senha && !validarSenha(senha)) {
         e.target.setCustomValidity('A senha deve ter no mínimo 6 caracteres, incluindo letras e números.');
-    } else {
+        } else {
         e.target.setCustomValidity('');
     }
 });
